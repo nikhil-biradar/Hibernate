@@ -1,9 +1,11 @@
 package org.example;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Student {
 
+    @Id
     private int id;
     private String name;
     private String city;
@@ -41,7 +43,8 @@ public class Student {
         this.city = city;
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public String toString() {
+        return this.id + " : " + this.name + " : " + this.city;
     }
 }
