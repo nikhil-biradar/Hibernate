@@ -10,10 +10,12 @@
     <property name="hibernate.connection.username">postgres</property>
     <property name="hibernate.connection.password">Nikhil123</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
     <property name="hibernate.show_sql">true</property>
     <mapping class="org.example.Student"/>
     <mapping class="org.example.Address"/>
+    <mapping class="org.mapping.Question"/>
+    <mapping class="org.mapping.Answer"/>
 
 </session-factory>
 </hibernate-configuration>

@@ -4,12 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Date;
 
-public class App
-{
+public class App {
     public static void main( String[] args ) throws IOException {
         System.out.println( "Project Started...");
 

@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 public class FetchDemo {
     public static void main(String[] args) {
+
         //get, load
         Configuration cfg = new Configuration();
         cfg.configure("hibernate.cfg.xml");
