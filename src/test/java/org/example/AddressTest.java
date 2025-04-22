@@ -8,6 +8,4 @@ public class AddressTest {
     public void AddressTest(){
         Address ad = new Address();
     }
-
-
 }

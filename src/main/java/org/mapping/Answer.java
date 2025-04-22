@@ -9,8 +9,7 @@ public class Answer {
     private int answerId;
     private String answer;
 
-    @OneToOne
-    @JoinColumn(name = "q_id")
+    @ManyToOne
     private Question question;
 
     public Question getQuestion() {

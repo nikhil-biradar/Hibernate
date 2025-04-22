@@ -2,6 +2,8 @@ package org.mapping;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Question {
     @Id
@@ -9,18 +11,17 @@ public class Question {
     private int questionId;
     private String question;
 
-    @OneToOne
-    @JoinColumn(name = "a_id")
-    private Answer answer;
+    @OneToMany(mappedBy = "question",cascade = CascadeType.ALL)
+    private List<Answer> answers;
 
     public Question() {
         super();
     }
 
-    public Question(Answer answer, String question, int questionId) {
-        this.answer = answer;
-        this.question = question;
+    public Question(int questionId, String question, List<Answer> answers) {
         this.questionId = questionId;
+        this.question = question;
+        this.answers = answers;
     }
 
     public int getQuestionId() {
@@ -39,11 +40,11 @@ public class Question {
         this.question = question;
     }
 
-    public Answer getAnswer() {
-        return answer;
+    public List<Answer> getAnswers() {
+        return answers;
     }
 
-    public void setAnswer(Answer answer) {
-        this.answer = answer;
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
     }
 }
