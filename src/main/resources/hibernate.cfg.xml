@@ -16,6 +16,8 @@
     <mapping class="org.example.Address"/>
     <mapping class="org.mapping.Question"/>
     <mapping class="org.mapping.Answer"/>
+    <mapping class="org.many_mapping.Employee"/>
+    <mapping class="org.many_mapping.Project"/>
 
 </session-factory>
 </hibernate-configuration>
