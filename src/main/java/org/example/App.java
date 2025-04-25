@@ -37,7 +37,7 @@ public class App {
 
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
-        session.persist(st);
+        session.saveOrUpdate(st);
         session.persist(ad);
         tx.commit();
         session.close();

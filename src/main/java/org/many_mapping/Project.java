@@ -1,6 +1,6 @@
 package org.many_mapping;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

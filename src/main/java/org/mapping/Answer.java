@@ -1,6 +1,6 @@
 package org.mapping;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Answer {
