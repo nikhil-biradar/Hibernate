@@ -1,6 +1,5 @@
 package org.example;
 
-import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.Cacheable;
@@ -9,7 +8,12 @@ import javax.persistence.Id;
 
 @Entity
 @Cacheable
-@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY) //Eh cache
+@org.hibernate.annotations.Cache(
+        usage = CacheConcurrencyStrategy.READ_WRITE, //Redis Cache
+        region = "student"
+)
+
 public class Student {
 
     @Id
