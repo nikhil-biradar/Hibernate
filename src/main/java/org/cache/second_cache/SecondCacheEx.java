@@ -21,6 +21,6 @@ public class SecondCacheEx {
         Student student2 = session2.get(Student.class, 105);
         System.out.println(student2);
         session2.close();
-
+        factory.close();
     }
 }
