@@ -24,6 +24,7 @@
     <mapping class="org.mapping.Answer"/>
     <mapping class="org.many_mapping.Employee"/>
     <mapping class="org.many_mapping.Project"/>
+    <mapping resource="org/xml_mapping/Person.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>
